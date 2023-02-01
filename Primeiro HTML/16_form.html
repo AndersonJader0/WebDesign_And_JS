@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--Declaração de doctype informa ao agente de usuário(navegador) a versão do html que deve ser renderizada.-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura básica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Anderson">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+
+            .formLogin{
+                width: 250px;
+                margin: 50px auto;
+            }
+
+            .formLogin fieldset{
+                background-color: #ccc;
+            }
+
+            .formLogin label{
+                margin-top: 25px;
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            #user, #pass, .btn{
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 8px;
+            font-size: 18px;
+            font-family: sans-serif;
+            border: none;
+        }
+
+        #user:focus, #pass:focus{
+            background: #ddd;
+        }
+
+        .btn:hover{
+            background-color:#ddd;
+        }
+
+        .btn{
+            margin-top: 15px;
+        }
+
+        #user{
+            margin-bottom: 15px;
+        }
+
+        </style>
+
+    </head>
+    <body>
+        <h1>Estrutura basica</h1>
+
+        <form action="#" method="POST" class="formLogin">
+            <fieldset>
+
+                <legend>Login</legend>
+
+                <label for="user">Digite o seu usuario</label>
+                <input type="text" id="user" name="user" autofocus>
+
+                <label for="pass">Digite o seu usuario</label>
+                <input type="password" id="pass" name="pass">
+
+                <input type="submit" value="logar" class="btn">
+
+            </fieldset>
+
+
+        </form>
+    </body>
+</html>
