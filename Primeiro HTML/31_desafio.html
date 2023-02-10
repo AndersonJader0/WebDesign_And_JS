@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif, helvetica;
+        }
+
+        body{
+            width: 70%;
+            margin: auto;
+        }
+
+        h1{
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        label[for=ckbox] p, label[for=ckbox2] p, label[for=ckbox3] p{
+            display: inline-block;
+
+        }
+        label[for=ckbox]{
+            margin-left: 6%;
+        }
+
+        label[for=ckbox] .ckbox, label[for=ckbox2] .ckbox2, label[for=ckbox3] .ckbox3{
+            display: inline-block;
+            width: 50px;
+            height: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        label[for=ckbox] .ckbox::before, label[for=ckbox2] .ckbox2::before, label[for=ckbox3] .ckbox3::before{
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border: 1px solid black;
+            top: 2px;
+            border-radius: 50%;
+            margin-left: 1.8px;
+        }   
+
+        input[type="checkbox"]{
+            display: inline-block;
+            width: 0;
+            height: 0;
+            visibility: hidden;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            transition-property: margin;
+        }
+
+        input[id="ckbox"]:checked + .ckbox::before, input[id="ckbox2"]:checked + .ckbox2::before, input[id="ckbox3"]:checked + .ckbox3::before{
+            background-color: red;
+            margin-left: 32px;
+            transition-duration: .3s;
+        }
+
+        input[id="ckbox"]:enabled + .ckbox::before, input[id="ckbox2"]:enabled + .ckbox2::before, input[id="ckbox3"]:enabled + .ckbox3::before{
+            margin-right: 32px;
+            transition-duration: .3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio do curso</h1>
+    
+    <label for="ckbox">
+    <input type="checkbox" id="ckbox">
+    <span class="ckbox"></span>
+    <p>Esporte</p>
+    </label>
+
+    <label for="ckbox2">
+    <input type="checkbox" id="ckbox2">
+    <span class="ckbox2"></span>
+    <p>Política</p>
+    </label>
+
+    <label for="ckbox3">
+    <input type="checkbox" id="ckbox3">
+    <span class="ckbox3"></span>
+    <p>Educação</p>
+    </label>
+
+</body>
+</html>

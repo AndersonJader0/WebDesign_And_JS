@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article:nth-child(1) a{
+            color: red;
+        }
+
+        article:nth-child(3) > p{
+            color: red;
+        }
+
+        article:nth-child(5) h3 + p{
+            color: pink;
+        }
+
+        article:nth-child(7) h3 ~ p{
+            color: orange;
+        }
+
+        article:not(.destaque){
+            color: orange;
+        }
+
+        .destaque{
+            background: yellow;
+        }
+
+        a[href="#"]{
+            opacity: .2;
+        }
+
+        a[href^="http"]{
+            color: red;
+        }
+
+        a[title]{
+            color: green;
+        }
+
+        a[href$=".pdf"]{
+            text-decoration: none;
+        }
+
+        div{
+            border: 3px solid red;
+            padding: 25px;
+            position: relative;
+            margin: 100px;
+        }
+
+        div:before{
+            content: "before:";
+            background: #ccc;
+        }
+
+        div:after{
+            content: "";
+            background: red;
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        
+
+
+
+    </style>
+</head>
+<body>
+
+    <div>Texto principal da div</div>
+    <article>
+        <h3>titulo</h3>
+        <p> Parágrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+        <p> Parágrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+        <p> Parágrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+    </article>
+
+    <ul>
+        <li><a href="#">Link falso</a></li>
+        <li><a href="#">Link falso</a></li>
+        <li><a href="http://serfrontend.com" target="_blank">Link externo</a></li>
+        <li><a href="http://serfrontend.com/qq.pdf" target="_blank">Link externo</a></li>
+        <li><a href="23_transition.html" title="veja exercicio anterior">Link interno</a></li>
+    </ul>
+</body>
+</html>
