@@ -1,6 +1,3 @@
-# WebDesign
-
-## Curso de Web Design com CSS3, HTML5 e JS.
-
-### Daniel Tapias Morales, Serliv Cursos, plataforma UDEMY.
-#### Frizando que os projetos foram desenvolvidos durante o curso portanto não de minha autoria.
+# Campo de estudo e aprendizagem.
+## Os projetos não são de minha autoria.
+### São projetos de cursos da udemy e treinamentos de alguns canais do youtube.
