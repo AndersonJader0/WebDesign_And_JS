@@ -1,0 +1,38 @@
+Como em um bloco desenhado já feito com border e 
+seu conteúdo tendo um h1, p e um button no final.
+Porém esse button não fica no final do bloco mas
+fica depois do p.
+Basta dizer que o p preenche todo o espaço empurrando
+o button pra baixo do container.
+tendo flex-grow: 1;
+Ou usa um aling-self: end.
+
+
+Para termos um container grid basta colocarmos
+nomedocontainer{
+display: grid; 
+} ??
+Não, preciso do grid-template-columns: os pxs;
+
+Como se faz para separar os items do grid?
+Usa-se grid-columns-gap: px;
+e grid-rows-gap: px;
+
+Qual a forma simplificada de dar espaçamentos no
+columns e nos rows.
+grid-gap: valor valor;
+
+Qual é a nova medida no grid?
+fr, uma fração do espaço que excede.
+
+
+
+
+
+
+
+
+
+
+
+

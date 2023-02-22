@@ -1,0 +1,15 @@
+grid-template-areas o que é?
+É uma forma facilitada de se dimensionar um tamanho
+para blocos na páginas.
+apenas com grid-template-areas:
+"header header header"
+"nav    nav    aside"
+
+Como funcionaria o alinhamento de linhas com o código
+grid-template-columns: repeat(3, [col-start] 1fr
+[col-end]);
+Funcionaria pela nomeação das linhas em numeros usando
+o start e end assim:
+col-start 1 / col-end 3;
+
+

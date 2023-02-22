@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .calculadora{
+            display: grid;
+            grid-auto-rows: minmax(1em, 7em);
+            border: 30px solid gray;
+            border-radius: 10px;
+            grid-template-columns: repeat(4, 100px);
+            width: 27em;
+            height: 650px;
+            background-color: gray;
+            margin: auto;
+            text-align: center;
+            grid-gap: 1px 10px;
+            grid-template-areas: 
+            "vazio vazio vazio vazio"
+            "AC porcentagem X divisao"
+            "sete oito nove igual"
+            "quatro cinco seis menos"
+            "um dois tres mais"
+            "zero zero virgula mais"
+        }
+
+        .gridItem{
+            font-size: 30px;
+            font-family: sans-serif;
+            background-color:bisque;
+            padding: 1em;
+            align-self: center;
+        }
+
+        .vazio{
+            grid-area: vazio;
+        }
+        .AC{
+            grid-area: AC;
+        }
+
+        .porcentagem{
+            grid-area: porcentagem;
+        }
+
+        .X{
+            grid-area: X;
+        }
+
+        .divisao{
+            grid-area: divisao;
+        }
+
+        .sete{
+            grid-area: sete;
+        }
+
+        .oito{
+            grid-area: oito;
+        }
+
+        .nove{
+            grid-area: nove;
+        }
+
+        .igual{
+            grid-area: igual;
+        }
+
+        .quatro{
+            grid-area: quatro;
+        }
+
+        .cinco{
+            grid-area: cinco;
+        }
+
+        .seis{
+            grid-area: seis;
+        }
+
+        .menos{
+            grid-area: menos;
+        }
+
+        .tres{
+            grid-area: tres;
+        }
+
+        .dois{
+            grid-area: dois;
+        }
+
+        .um{
+            grid-area: um;
+        }
+
+        .mais{
+            grid-area: mais;
+            height: 67%;
+            align-self: center;
+        }
+
+
+        .zero{
+            grid-area: zero;
+
+        }
+
+        .virgula{
+            grid-area: virgula;
+        }
+
+        .zero{
+            background-color: orange;
+        }
+
+        .mais{
+            background-color: orange;
+        }
+
+        .vazio{
+            background-color: orange;
+        }
+
+       
+        
+    </style>
+
+</head>
+<body>
+    <div class="calculadora">
+        <p class="vazio griItem">vazio</p>
+        <p class="AC gridItem">AC</p>
+        <p class="porcentagem gridItem">%</p>
+        <p class="X gridItem">X</p>
+        <p class="divisao gridItem">/</p>
+        <p class="sete gridItem">7</p>
+        <p class="oito gridItem">8</p>
+        <p class="nove gridItem">9</p>
+        <p class="igual gridItem">=</p>
+        <p class="quatro gridItem">4</p>
+        <p class="cinco gridItem">5</p>
+        <p class="seis gridItem">6</p>
+        <p class="menos gridItem">-</p>
+        <p class="um gridItem">1</p>
+        <p class="dois gridItem">2</p>
+        <p class="tres gridItem">3</p>
+        <p class="mais gridItem">+</p>
+        <p class="zero gridItem">0</p>
+        <p class="virgula gridItem">,</p>
+    </div>
+</body>
+</html>
