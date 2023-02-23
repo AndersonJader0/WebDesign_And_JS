@@ -1,0 +1,125 @@
+Algumas tags semânticas que foram vistas no decorrer
+do curso você lembra?
+R: Cite, blockquote, address, code, figure e
+figurecaption.
+
+Quais foram as novas tags semânticas vista?
+abbr, time, del,ins e kbd.
+
+Para que serve o <kbd>?
+É uma tag semântica para informar que botões
+sejam apertados pelo userpor exemplo. 
+<kbd>CTRL</kbd> dentro da tag <p>.
+
+Para que serve o <abbr>?
+Serve para nomes abreviados na páginas. Por exemplo
+<abbr>HTML</abbr> dentro da tag p ou h1, h2 etc.
+Mas para informar ao agente de usuário o significado
+usamos o title="Linguagem de marcação de hipertexto"
+
+Para que serve o <time>?
+Para demarcar datas no html. Por exemplo:
+<time>15 de Setembro de 2018</time>
+
+Para que serve o atributo datetime?
+o atributo que funciona assim:
+<time datetime="2018-09-15"> funciona para colocar
+as datas para os browsers entenderem, colocando
+no padrão americano.
+
+Porém no atributo datetime temos um problema 
+como informariamos ao browser que horas é?
+
+usariamos:
+<time datetime="2018-09-15T20:00:00">
+Usando o T para separar a data da hora.
+
+Porém no atributo datetime com o t separando a hora
+temos um problema. Como informariamos que esse 
+horário respeita o fusohorário do Brasil?
+
+Usariamos:
+<time datetime="2018-09-15T20:00:00-03:00">
+- e 3h a menos.
+
+Como fariamos para deixar explicito que trocamos
+uma palavra para o user?
+
+<span style="text-decoration: line-through">
+complicado>complicado</span> fácil</p>
+Porém há uma maneira melhor semânticamente.
+
+Como seria uma maneira melhor semânticamento de
+deixar explicito que trocamos uma palavra para o
+user?
+
+Assim: <del>complicado</del> <ins>fácil<ins>
+del de deletado e ins de inserido.
+
+Como se faz para dizer para o agente de usuário
+que tal texto ou tal palavra está em inglês?
+simples: <span lang="en-us">JS conference</span>
+
+
+No CSS há também especificidade como seria essa
+regra?
+Em geral tags normais como p uma sobrescreverá a
+outra.
+Porém se tivermos uma classe, a classe é mais 
+específica que a tag p por isso o que será aplicado
+será o da classe p invés da tag p simplesmente.
+
+Como Daniel Tapias Morales ensinou que devemos
+ver a especificidade no CSS?
+chamar tags normais seria como "pessoa" a classe
+seria apelido e o ID seria o CPF, RG.
+
+Se tivermos um elemento.apelido é mais especifico
+que só o apelido?
+Sim um exemplo disso é p.destaque e .destaque. O
+p.destaque ganha.
+
+o Seletor asterisco ele tem baixa ou alta especifi
+cidade?
+Baixa, qualquer um ganha dele.
+
+Caso chame os seletores no css de forma que tenham
+o mesmo peso qual será aplicado?
+O que vier depois.
+
+First-letter é uma pseudoelemento. E o firt-child?
+É uma pseudoclasse.
+
+Para que serve a diretiva !importante?
+Sobrescreve o elemento independente da regra.
+exemplo: 
+p{
+color: green !important;
+} OBS: É MELHOR EVITAR.
+
+Qual é uma boa prática no css a respeito de
+classe e id nos blocos div por exemplo.
+Não colocar id, prefirir classes. Em geral
+99% das vezes é bom prefirir classes em vez de ids.
+
+Existe uma metodologia escrita em css que se dá
+por meio de __ como é?
+ex: jumbotron.
+jumbotron__title.
+jumbotron__text.
+
+O que significa vh?
+viewport height, porém não pega a margin, border
+então é só zerar esses cara com o *.
+
+
+
+
+
+
+
+
+
+
+
+
