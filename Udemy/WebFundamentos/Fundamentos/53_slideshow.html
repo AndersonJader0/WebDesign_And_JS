@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+
+    <style>
+
+        @keyframes slide{
+
+            0%, 22%, 100%{
+                transform: translateY(0);
+            }
+
+            25%, 47%{
+                transform: translateY(-50vh);
+            }
+            50%, 72%{
+                transform: translateY(-100vh);
+            }
+
+            75%, 97%{
+                transform: translateY(-150vh);
+            }
+        }
+
+        body{
+            font-family: sans-serif;
+            color: white;
+            background: rgb(44, 44, 44);
+            margin: 0;
+        }
+
+        #slide-externo{
+            width: 80vw;
+            height: 50vh;
+            border: 10px solid white;
+            box-shadow: 0 0 10px black;
+            margin-left: 10vw;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        #slide-interno{
+            width: 100%;
+            animation: slide 15s infinite cubic-bezier(.29,-0.53,.64,1.46); 
+            will-change: transform;
+        }
+
+        #slide-interno img{
+            display: block;
+            height: 50vh;
+            width: 100%;
+            /* object-fit: cover; */
+        }
+    </style>
+</head>
+<body>
+    <h2>Slideshow</h2>
+
+    <div id="slide-externo">
+        <div id="slide-interno">
+            <img src="/Udemy/WebFundamentos/Fundamentos/imagens_slideshow/slide1.jpg"  alt=dog 1>
+            <img src="/Udemy/WebFundamentos/Fundamentos/imagens_slideshow/slide2.jpg" alt=dog 2>
+            <img src="/Udemy/WebFundamentos/Fundamentos/imagens_slideshow/slide3.jpg"  alt=dog 3>
+            <img src="/Udemy/WebFundamentos/Fundamentos/imagens_slideshow/slide4.jpg" alt=dog 4>
+        </div>
+    </div>
+</body>
+</html>

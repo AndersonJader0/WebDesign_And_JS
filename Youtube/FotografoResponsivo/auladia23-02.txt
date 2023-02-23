@@ -1,0 +1,33 @@
+Prof Thatá.
+
+elementos e protocolos de www.
+HTTP, FTP, DNS, SMTP, POP3, SSH.
+
+Serviços e microserviços.
+REST, GET, PUT, POST, DELETE, HEAD.
+
+Padrões de arquitetura para desenvolvimento web e
+mobile.
+MVP, MVVM, arquitetura de software. Padrão do projeto
+do GoF, padrões de projeto organizacionais.
+
+Desenvolvimento e aplicação de protocolos:
+modelos de falhas e segurança.
+
+
+Internet das coisas.
+IoT, integração com Api IoT.
+
+Computação em nuvem.
+arquitetura distrubidas e paralela. Inversão de controle
+Sincronização em sistemas distribuidos.
+
+
+Programação paralela e sistemas distrbuídos.
+
+Processamento paralelo.
+aplicações de processamento paralelo e novas tecnologias.para sistemas distribuidos.
+
+Aulas de quinta estão na psc-distribuição e 
+psc pdf.
+

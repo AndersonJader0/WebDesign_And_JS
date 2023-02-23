@@ -1,0 +1,46 @@
+o que faz o animation-direction?
+Ele faz com que a animação fique alternada, reverse
+ou alternada reversada. (alternate-reverse);
+
+o que faz o animation-fill-mode?
+Preenche o elemento com a cor do 0% do keyframes
+no inicio ou no fim.
+
+O que faz o animation-fill-mode: backwards?
+faz com que o elemento já comece com a propriedade 
+do 0% do @keyframes e termine com essa propriedade 
+também. Se é vermelho o elemento mas tem amarelo 
+no 0% vai ficar amarelo no inicio e volta pro 
+vermelho no fim.
+
+O que faz o animation-fill-mode: forwards?
+faz com que termine a animação com a cor do 0%
+do @keyframes.
+
+Quais são as opções em animation?
+animation-name
+animation-duration
+animation-timing-function
+animation-delay
+animation-iteration-count
+animation-direction
+animation-fill-mode
+animation-play-state
+
+Qual a ordem correta para aplicar o short-hand
+em animation?
+name duration timing-function delay 
+iteration-count direction fill-mode play-state.
+
+Como fazer para uma imagem ficar colada na outra
+em baixo uma sobre a outra?
+display: block;
+
+Para que serve o object-fit?
+Serve como o background-size: com contain, cover 
+etc.
+Porém não precisa de background.
+
+
+
+
