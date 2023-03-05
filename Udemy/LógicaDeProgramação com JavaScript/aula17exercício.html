@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            text-align: center;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background: #ddd;
+        }
+
+        h1{
+            margin-top: 28vh;
+        }
+
+        button{
+            width: 2.4em;
+            height: 2.4em;
+            font-size: 2em;
+        }
+
+        button:hover{
+            cursor: pointer;
+        }
+
+        div{
+            border: 1px solid black;
+            width: 25em;
+            height: 5em;
+            margin: auto;
+            margin-top: 1em;
+        }
+
+        p{
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lógica de programação com JavaScript</h1>
+
+    <button id="somar" onclick="somar()">+</button>
+    <button id="subtrair" onclick="subtrair()">-</button>
+    <button id="dividir" onclick="dividir()">/</button>
+    <button id="multiplicar" onclick="multiplicar()">x</button>
+    <button id="limpar" onclick="limpar()">c</button>
+
+    <div>
+        <p class="content">0</p>
+    </div>
+
+    <p>Mini calculadora</p>
+
+    <script>
+        var content = document.querySelector('.content');
+        var number = 0;
+        
+        function somar(){
+            number += parseFloat(prompt('Digite um número'));
+            content.innerHTML = number;
+        }
+
+        function subtrair(){
+            number -= parseFloat(prompt('Digite um número'));
+            content.innerHTML = number;
+        }
+
+        function dividir(){
+            number /= parseFloat(prompt('Digite um número'));
+            content.innerHTML = number;
+        }
+
+        function multiplicar(){
+            number *= parseFloat(prompt('Digite um número'));
+            content.innerHTML = number;
+        }
+
+        function limpar(){
+            content.innerHTML = 0;
+        }
+    </script>
+</body>
+</html>
