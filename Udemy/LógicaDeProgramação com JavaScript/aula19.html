@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="iniciarCalculo('+')">+</button>
+    <button onclick="iniciarCalculo('-')">-</button>
+    <button onclick="iniciarCalculo('/')">/</button>
+    <button onclick="iniciarCalculo('*')">x</button>
+    
+    <div id="output"></div>
+
+    <script>
+
+        var n1 = prompt('digite um número');
+        n1 = parseFloat(n1);
+
+        escreve(n1);
+
+        function escreve(mensagem){
+            var output = document.querySelector('#output');
+            output.innerHTML = mensagem;
+        }
+
+        function iniciarCalculo(operador){
+            var n1 = document.querySelector('#output').textContent;
+            n1 = parseFloat(n1);
+            var n2 = parseFloat(prompt('digite outro número'));
+            var msg = calcular(operador, n1, n2);
+            escreve(msg);
+        }
+
+        function calcular(operador, n1, n2){
+
+            var numeroCalculado = null;
+
+            switch(operador){
+                case '+':
+                    numeroCalculado = n1 + n2;
+                    break;
+                case '-':
+                    numeroCalculado = n1 - n2;
+                    break;
+                case '/':
+                    numeroCalculado = n1 / n2;
+                    break;
+                case '*':
+                    numeroCalculado = n1 * n2;
+                    break;
+                default: 
+                alert('Não é um número.');
+            }    
+            
+            return numeroCalculado;
+        }
+
+    </script>
+</body>
+</html>
