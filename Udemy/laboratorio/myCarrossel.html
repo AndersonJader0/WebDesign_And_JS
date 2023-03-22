@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myCarrossel</title>
+
+    <style>
+
+        p{
+            text-align: center;
+            background: orange;
+            display: block;
+            width: 10em;
+            padding: .5em 0;
+            margin: 5em auto;
+        }
+
+        p:hover{
+            cursor: pointer;
+        }
+
+        .container{
+             width: 300px;
+             height: 200px;
+             
+             margin: auto;
+             overflow: hidden;
+        }
+
+        img{
+            width: 300px;
+        }
+
+        .container2{
+            width: 300px;
+            display: flex;
+            flex-direction: row;
+            transition: transform .25s ease-in-out;
+            /* transform: translateX(-600px); */
+        } 
+
+    </style>
+</head>
+<body>
+    <p class="btn btn1" onclick="mudar('direita')">Mudar direita</p>
+    <p class="btn btn2" onclick="mudar('esquerda')">Mudar esquerda</p>
+    <div class="container">
+        <div class="container2">
+            <img src="/Udemy/laboratorio/background.jpg">
+            <img src="/Udemy/laboratorio/john-towner-JgOeRuGD_Y4-unsplash.jpg">
+            <img src="/Udemy/laboratorio/workspace.jpg">
+        </div>
+    </div>
+
+    <script>
+
+        var value = 0;
+
+        function mudar(direction){
+            
+            var documento = document.querySelector('.container2');
+
+            if(direction == 'direita' && value < 600){
+            value += 300;
+            var translate = 'translateX(-' + value + 'px)';
+            documento.style.transform = translate;
+            }
+            else if(direction == 'esquerda' && value > 0){
+                value -= 300;
+                var translate = 'translateX(-' + value + 'px)';
+                documento.style.transform = translate;
+            }
+        }
+    </script>
+</div>
+</body>
+</html
