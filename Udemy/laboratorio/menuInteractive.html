@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menuInteractive</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .menu-lista{
+            display: flex;
+            justify-content: space-around;
+            background-color: orange;
+            list-style: none;
+            position: relative;
+        }
+
+        li:hover{
+            color: red;
+            cursor: pointer;
+        }
+
+        .menu-lista li{
+            padding: 1em 0;
+        }
+
+        p{
+            width: 20%;
+            height: 0;
+            overflow: hidden;
+            display: block;
+            position: absolute;
+            top: 2em;
+            background: gray;
+        }
+
+        li:hover .texto{
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul class="menu-lista">
+            <li class="item1">Lorem ipsum1</li>
+            <li>Lorem ipsum2</li>
+            <li>Lorem ipsum3</li>
+            <li>Lorem ipsum4</li>
+            <li>Lorem ipsum5</li>
+        </ul>
+    </nav>
+
+        <p class="texto">
+            lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsum
+            lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.
+        </p>
+</body>
+</html>
