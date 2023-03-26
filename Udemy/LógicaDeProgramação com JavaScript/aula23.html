@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+<script>
+    var dados = [
+        {'nome': 'josef', 'email': 'josef036@gmail.com'},
+        {'nome': 'andreia', 'email': 'estelarAndreia@gmail.com'},
+        {'nome': 'matheus', 'email': 'matheusdasilva37@gmail.com'}
+    ];
+    var msg = '';
+    for(var i = 0; i < dados.length; i++){
+        msg += '<p>Nome: ' + dados[i].nome + '</p>';
+        msg += '<p>Email: ' + dados[i].email + '</p> <br>';
+    }
+
+    document.querySelector('#output').innerHTML = msg;
+</script>
+</html>
