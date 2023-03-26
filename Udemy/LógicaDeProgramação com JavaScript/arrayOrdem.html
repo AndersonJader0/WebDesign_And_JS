@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array em ordem e método de um objeto person</h1>
+</body>
+<script>
+
+    var things = ['1 teste', '3 teste', '2 teste'];
+
+    things.sort();
+    console.log(things);
+
+    const person = {
+    fName: "Elon",
+    lName: "Musk",
+    
+    fullName() {
+        return `${this.fName} ${this.lName}`
+    }
+}
+</script>
+</html>
