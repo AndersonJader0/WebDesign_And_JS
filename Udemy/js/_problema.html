@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numbers = [1, 2];
+        var calcularMedia = () => {
+            var soma = numbers.reduce(function(soma, i) {
+                return soma + i;
+            });
+            console.log(soma);
+        }
+
+        calcularMedia();
+
+        //Seconde resolution
+
+        function somarNumbers(){
+            var result = 0;
+            var x = 0;
+
+            while(arguments[x]){
+                result += arguments[x];
+                x++;
+            }
+            console.log(result);
+        }
+
+        somarNumbers(1, 2);
+    </script>
+</body>
+</html>

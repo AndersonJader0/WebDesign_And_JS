@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    (function(){
+        'use strict';
+        var isValid = false;
+        alert('olá mundo! sou uma função auto-invocada!');
+        console.log(isValid);
+
+        function somar(...arr){
+            console.log(arr[0] + arr[1] + arr[2]);
+        }
+        somar([10,20,30]);
+    })();
+
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var soma = 0;
+
+        var array = [1, 2, 3];
+
+        var soma = array.reduce(function(soma, i) {
+            return soma + i;
+        });
+
+        console.log(soma);
+
+        //seconde option
+
+        for(var i = 0; i < array.lenght; i++){
+            soma += array[i];
+        }
+
+
+        //third option
+
+        function somar(){
+            
+            var result = 0;
+            var x = 0;
+
+            while(arguments[x]){
+                result += arguments[x];
+                x++;
+            }
+            console.log(result);
+        }
+
+        somar(10, 20, 30, 40, 50, 60, 70);
+    </script>
+</body>
+</html>
