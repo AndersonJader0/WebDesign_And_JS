@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="corpo">
+
+    <h1 id="textoPrincipal">Olá mundo!</h1>
+
+    <h2 class="subtitle">Sou um subtitulo!</h2>
+    <h2 class="subtitle">Sou um segundo subtitulo!</h2>
+
+    <script>
+   
+        (function(){
+            function calcularIMC(peso, altura, callback){
+                'use strict';
+                var imc = peso / (altura ** 2);
+
+                if(callback && typeof callback === 'function'){
+                    return callback(imc);
+                }
+                console.log('não passou callback');
+                return imc;
+            }
+
+            function classificaIMC(imc){
+                if(imc <= 16.9){
+                    return 'muito abaixo do peso';
+                }else if(imc <= 18.4){
+                    return 'abaixo do peso';
+                }else if(imc <= 24.9){
+                    return 'peso normal';
+                }else if(imc <= 29.9){
+                    return 'sobrepeso';
+                }else if(imc <= 34.9){
+                    return 'obesidade grau 1';
+                }else if(imc <= 40){
+                    return 'obesidade grau 2';
+                }else if(imc > 40){
+                    return 'obesidade grau 3'
+                }
+            }
+
+            var peso = 65;
+            var altura = 1.75;
+            
+            //var classificacao = classificaIMC(calcularIMC(peso, altura));
+
+            var imc = calcularIMC(peso, altura, classificaIMC)
+
+            console.log('Classificação: ' + imc);
+        })();
+
+    </script>
+</body>
+</html>
