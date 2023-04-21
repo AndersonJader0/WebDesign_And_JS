@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="beluga.js"></script>
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+
+        table{
+            margin: auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td, th{
+            padding: 1em 2.5em;
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table class="table js-tabela">
+        <thead>
+            <th>Aluno</th>
+            <th>Nota 1</th>
+            <th>Nota 2</th>
+            <th>Nota 3</th>
+            <th>Nota 4</th>
+            <th>Média</th>
+        </thead>
+
+        <tbody>
+            <tr class="aluno">
+                <td class="aluno-nome">João</td>
+                <td class="aluno-n1">5</td>
+                <td class="aluno-n2">7</td>
+                <td class="aluno-n3">9</td>
+                <td class="aluno-n4">9</td>
+                <td class="aluno-m"></td>
+            </tr>
+
+            <tr class="aluno">
+                <td class="aluno-nome">Stefany</td>
+                <td class="aluno-n1">7</td>
+                <td class="aluno-n2">8</td>
+                <td class="aluno-n3">7</td>]
+                <td class="aluno-n4">8</td>
+                <td class="aluno-m"></td>
+            </tr>
+
+            <tr class="aluno">
+                <td class="aluno-nome">Fabricia</td>
+                <td class="aluno-n1">7</td>
+                <td class="aluno-n2">7</td>
+                <td class="aluno-n3">7</td>
+                <td class="aluno-n4">7</td>
+                <td class="aluno-m"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        (function(){
+            var trs = document.querySelectorAll('.js-tabela tbody .aluno');
+
+            var x = 0;
+            while(trs[x]){
+                var linhaAluno = trs[x];
+                console.log(linhaAluno);
+               
+                var tds = linhaAluno.querySelectorAll('td');
+                console.log(tds);
+
+                var notas = recuperarNumerosDeColunas(tds);
+
+                var media = calcularMedia.apply(this, notas);
+
+                linhaAluno.querySelector('.aluno-m').textContent = media;
+
+                x++;
+            }
+
+            function recuperarNumerosDeColunas(tds){
+                var x = 0;
+                var arr = [];
+                while( tds[x] ){
+                    if(!isNaN(tds[x].textContent) && tds[x].textContent !== ''){
+                        arr.push(parseFloat(tds[x].textContent));
+                    }
+                    x++;
+                }
+                console.log('---');
+                console.log(arr);
+                return arr;
+            }
+        })()
+    </script>
+</body>
+</html>

@@ -8,8 +8,13 @@
 </head>
 <body>
     <p>Curso de JavaScript</p>
+    <input type="text" id="txtName">
     <script>
+        var field = document.getElementById('txtName');
         document.querySelector('p').innerHTML = 'texto alterado';
+
+        field.value = 'Anderson Jader'
+        field.disabled = true;
     </script>
 </body>
 </html>
