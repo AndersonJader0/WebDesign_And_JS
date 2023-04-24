@@ -15,12 +15,14 @@
     <p>Teste p5</p>
 
     <script>
+        (function(){
         var paragraphs = document.querySelectorAll('p');
         var x = 0;
         while(paragraphs[x]){
         paragraphs[x].textContent = 'Hacker passou por aqui';
         x++;
         }
+    })();
     </script>
 </body>
 </html>
