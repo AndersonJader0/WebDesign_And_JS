@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Curso de Javascript</h1>
+    <script>
+
+        var x = [0];
+
+        function mudaX(x){
+            var y = x;
+            y.push(2);
+            console.log('mudaX: ');
+            console.log(x);
+            console.log(y);
+        }
+
+        mudaX(x);
+        console.log('x: ', x);
+
+
+        function mudaCor(cor){
+            this.cor = cor;
+        }
+
+        var caneta1 = {
+            cor: 'red',
+            preco: 1,
+            mudarCor: mudaCor
+        }
+
+        var caneta3 = {
+            cor: 'blue',
+            preco: 2,
+            mudarCor: mudaCor
+        }
+
+        var caneta2 = {
+            cor: 'black',
+            mudarCor: function(cor){
+                this.cor = cor;
+                console.log(this.cor);
+            }
+        }
+
+        var caneta4 = {'cor': 'red', 'preco': 2}
+
+        //Muito repetitivo e monótono
+
+    </script>
+</body>
+</html>
