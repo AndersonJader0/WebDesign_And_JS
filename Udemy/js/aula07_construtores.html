@@ -8,11 +8,16 @@
 </head>
 <body>
     <script>
-        
-        //método construtor letra maiúscula.
-        function Caneta(valor, cor){
+
+        //Duas formas de criar objetos obrigando a usar o new
+
+        (function(window){
+            'use strict'
+            //método construtor letra maiúscula.
+        window.Caneta = function(valor, cor){
             this.valor = valor || 1;
-            var color = cor || black;
+            var color = cor || 'black';
+
             this.mudarCor = function(cor){
                 color = cor;
             }
@@ -20,6 +25,9 @@
                 return color;
             }
         }
+        })(window)
+
+        var caneta1 = new Caneta();
 
     </script>
 </body>
