@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <button id="btn" onclick="alert('onclick no atributo')">Button</button>
+
+    <div class="container">
+        <h1>Propagação de eventos</h1>
+
+        <div id="d1" style="background: red; padding: 25px;">
+            texto dentro da div
+            <span style="background: yellow;">texto dentro da span</span>
+        </div>
+
+        <div>
+            <h1>delegacao</h1>
+            <ul>
+                <li>lista 1</li>
+                <li>lista 2</li>
+                <li>lista 3</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var btn = document.getElementById('btn');
+
+        btn.addEventListener("click", function(){
+            alert('clicou com dom level 2');
+        })
+        btn.addEventListener("click", function(){
+            alert('clicou com dom level 2 com outro evento');
+        })
+
+        btn.onclick = function(){
+            alert('ola');
+        }
+        btn.onclick = function(){
+            alert('mundo');
+        }
+
+        var $d1 = document.querySelector('#d1');
+        var $d1Span = document.querySelector('#d1 span');
+
+        //usando obj event
+        $d1.addEventListener('click', function(e){
+            console.log('click no $d1');
+            e.stopPropagation();
+        }, false)
+
+        $d1Span.addEventListener('click', function(){
+            console.log('click no $d1Span');
+        }, false)
+
+        //usando obj event
+        document.addEventListener('click', function(e){
+
+            console.log('clicou no documento');
+            console.log(e.currentTarget); //documento ao qual foi atrelado o evento / o próprio document
+            console.log(this); //elemento ao qual foi atrelado o evento / o próprio document
+            console.log(e.target); //quem disparou o evento
+            
+        }, false)
+
+            var $ul = document.querySelector('ul');
+            var $lis = document.querySelectorAll('li');
+            
+            
+            $ul.addEventListener('click', function(e){
+                e.stopPropagation();
+                console.log(this);
+                console.log(e.target);
+                console.log(e.currentTarget);
+
+                if(e.target.nodeName === "LI"){
+                    console.log('clicou na li');
+                } //nodeName é o nome daquele obj no html
+            })
+
+            // var x = 0;
+            // while($lis[x]){
+            //     $lis[x].addEventListener('click', function(e){
+            //         e.stopPropagation();
+            //         console.log('clicou na li');
+            //     })
+            //     x++;
+            // }
+
+            //lis que foram pegas do html n é a nossa coleção e não o html
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //MINHA RESOLUÇÃO
+        var pessoa = [{nome: "josé", sobrenome: "araújo"},
+         {nome: "Carlos", sobrenome: "Eduardo"},
+          {nome:"Vanderlei", sobrenome: "Silva"}
+        ];
+
+        for(var i = 0; i < pessoa.length; i++){
+            console.log(window.pessoa[i].nome + ' ' + window.pessoa[i].sobrenome);
+        }
+
+
+        //RESOLUÇÃO DO PROFESSOR
+        var pessoa1 = {
+            nome: "Daniel",
+            sobrenome: "Tapias Morales"
+        };
+
+        var pessoa2 = {
+            nome: "José",
+            sobrenome: "Geraldo"
+        };
+
+        var pessoa3 = {
+            nome: "Maria",
+            sobrenome: "Oliveira"
+        };
+
+        var pessoas = [
+            pessoa1,
+            pessoa2,
+            pessoa3
+        ];
+
+        var x = 0;
+        while(pessoas[x]){
+            console.log(pessoas[x].nome + ' ' + pessoas[x].sobrenome);
+            x++
+        }
+
+        //TESTE
+
+        console.log('teste ' + window["pessoa1"].nome);
+        console.log('teste2 ' + window.pessoa1.nome);
+    </script>
+</body>
+</html>
